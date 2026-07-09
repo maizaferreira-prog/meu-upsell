@@ -1,58 +1,190 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Oferta Especial</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <title>Última Chance — Kit Receitas Best-Sellers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --chocolate: #3b2620;
+      --cacau-suave: #6d5047;
+      --blush: #faf3ef;
+      --creme: #fffdfb;
+      --framboesa: #b3164f;
+      --framboesa-escura: #8e103e;
+      --dourado: #c8964b;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
+      font-family: "DM Sans", Arial, sans-serif;
+      background: var(--blush);
+      color: var(--chocolate);
+      line-height: 1.6;
+    }
+    .wrap {
+      max-width: 560px;
+      margin: 0 auto;
+      padding: 48px 20px 64px;
+    }
+    .eyebrow {
       text-align: center;
-      padding: 40px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--dourado);
+      margin-bottom: 16px;
     }
-
-    .box {
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
-      max-width: 500px;
-      margin: auto;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    }
-
     h1 {
-      color: #e63946;
+      font-family: "Fraunces", Georgia, serif;
+      font-weight: 700;
+      font-size: clamp(26px, 5vw, 36px);
+      line-height: 1.15;
+      text-align: center;
+      margin-bottom: 14px;
     }
-
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 15px 25px;
-      background: #2a9d8f;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
+    .sub {
+      text-align: center;
+      font-size: 16px;
+      color: var(--cacau-suave);
+      max-width: 440px;
+      margin: 0 auto 32px;
     }
-
-    .btn:hover {
-      background: #21867a;
+    .ficha {
+      background: var(--creme);
+      border: 1px solid #eaddd5;
+      border-radius: 12px;
+      padding: 26px 26px 22px;
+      box-shadow: 0 6px 24px rgba(59, 38, 32, 0.08);
+      margin-bottom: 28px;
+    }
+    .ficha-titulo {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: 19px;
+      font-weight: 600;
+      border-bottom: 2px dashed #e5d3c8;
+      padding-bottom: 12px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .ficha-titulo span { font-size: 22px; }
+    .item {
+      display: flex;
+      gap: 12px;
+      padding: 9px 0;
+      align-items: flex-start;
+    }
+    .item + .item { border-top: 1px solid #f3e8e1; }
+    .check {
+      flex-shrink: 0;
+      width: 22px; height: 22px;
+      border-radius: 50%;
+      background: var(--framboesa);
+      color: #fff;
+      font-size: 13px;
+      display: flex; align-items: center; justify-content: center;
+      margin-top: 3px;
+    }
+    .item strong { display: block; font-size: 15px; }
+    .item p { font-size: 14px; color: var(--cacau-suave); }
+    .preco {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .preco .de {
+      font-size: 15px;
+      color: var(--cacau-suave);
+      text-decoration: line-through;
+    }
+    .preco .por {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: 44px;
+      font-weight: 700;
+      color: var(--framboesa);
+      line-height: 1.1;
+    }
+    .preco .detalhe { font-size: 14px; color: var(--cacau-suave); }
+    .aviso {
+      text-align: center;
+      font-size: 14px;
+      color: var(--dourado);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    #kiwify-upsell-trigger-t5n7UHu:hover { background-color: var(--framboesa-escura) !important; border-color: var(--framboesa-escura) !important; }
+    #kiwify-upsell-cancel-trigger-t5n7UHu { color: var(--cacau-suave); }
+    .garantia {
+      text-align: center;
+      font-size: 13px;
+      color: var(--cacau-suave);
+      margin-top: 26px;
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      .ficha { animation: subir 0.5s ease-out; }
+      @keyframes subir {
+        from { opacity: 0; transform: translateY(12px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
     }
   </style>
 </head>
 <body>
+  <div class="wrap">
+    <p class="eyebrow">Espere — última chance</p>
+    <h1>Comece pelo essencial: o Kit Receitas Best-Sellers</h1>
+    <p class="sub">
+      Tudo bem não levar a mentoria agora. Mas você pode começar a vender
+      esta semana com as receitas que mais dão lucro — por muito menos.
+    </p>
 
-  <div class="box">
-    <h1>Espere! Última Chance 🎯</h1>
-    <p>Como você não aproveitou a oferta anterior, estamos liberando um desconto especial agora.</p>
+    <div class="ficha">
+      <div class="ficha-titulo"><span>📖</span> O que vem no kit</div>
+      <div class="item">
+        <div class="check">✓</div>
+        <div>
+          <strong>E-book com as 15 receitas mais vendidas</strong>
+          <p>Testadas e aprovadas: as queridinhas que os clientes sempre pedem.</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="check">✓</div>
+        <div>
+          <strong>Guia rápido de precificação</strong>
+          <p>Calcule custo e preço de venda de cada receita sem complicação.</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="check">✓</div>
+        <div>
+          <strong>Acesso imediato e vitalício</strong>
+          <p>Baixe agora e comece a produzir ainda hoje.</p>
+        </div>
+      </div>
+    </div>
 
-    <h2>De R$97 por apenas R$47</h2>
+    <div class="preco">
+      <div class="de">De R$ 97</div>
+      <div class="por">R$ 47</div>
+      <div class="detalhe">pagamento único — apenas nesta página</div>
+    </div>
 
-<div style="text-align:center" id="kiwify-upsell-t5n7UHu" data-upsell-url="" data-downsell-url="">
-          <button id="kiwify-upsell-trigger-t5n7UHu" style="background-color:#5383ad;padding:12px 16px;cursor:pointer;color:#FFFFFF;font-weight:600;border-radius:4px;border:1px solid #5383ad;font-size:20px;">Sim, eu aceito essa oferta especial!</button>
-          <div id="kiwify-upsell-cancel-trigger-t5n7UHu" style="margin-top:1rem;cursor:pointer;font-size:16px;text-decoration:underline;font-family:sans-serif;">Não, eu gostaria de recusar essa oferta</div>
-        </div><script src="https://snippets.kiwify.com/upsell/upsell.min.js"></script>
+    <p class="aviso">🎯 Este desconto não aparece de novo</p>
 
+    <!-- BOTÃO DE DOWNSELL KIWIFY -->
+    <div style="text-align:center" id="kiwify-upsell-t5n7UHu" data-upsell-url="" data-downsell-url="">
+      <button id="kiwify-upsell-trigger-t5n7UHu" style="background-color:#b3164f;padding:16px 28px;cursor:pointer;color:#FFFFFF;font-weight:700;border-radius:8px;border:1px solid #b3164f;font-size:19px;font-family:'DM Sans',sans-serif;">Sim, quero o kit por R$ 47!</button>
+      <div id="kiwify-upsell-cancel-trigger-t5n7UHu" style="margin-top:1rem;cursor:pointer;font-size:15px;text-decoration:underline;font-family:'DM Sans',sans-serif;">Não, obrigada(o) — vou recusar mesmo assim</div>
+    </div>
+    <script src="https://snippets.kiwify.com/upsell/upsell.min.js"></script>
+
+    <p class="garantia">🔒 Compra com 1 clique, sem redigitar dados de pagamento · Garantia de 7 dias</p>
+  </div>
 </body>
 </html>
