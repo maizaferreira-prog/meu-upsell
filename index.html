@@ -2,29 +2,191 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <title>Página de Upsell</title>
+  <title>Oferta Especial — Mentoria Express</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --chocolate: #3b2620;
+      --cacau-suave: #6d5047;
+      --blush: #faf3ef;
+      --creme: #fffdfb;
+      --framboesa: #b3164f;
+      --framboesa-escura: #8e103e;
+      --dourado: #c8964b;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "DM Sans", Arial, sans-serif;
+      background: var(--blush);
+      color: var(--chocolate);
+      line-height: 1.6;
+    }
+    .wrap {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 48px 20px 64px;
+    }
+    .eyebrow {
+      text-align: center;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--framboesa);
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-family: "Fraunces", Georgia, serif;
+      font-weight: 700;
+      font-size: clamp(28px, 5vw, 40px);
+      line-height: 1.15;
+      text-align: center;
+      margin-bottom: 14px;
+    }
+    .sub {
+      text-align: center;
+      font-size: 17px;
+      color: var(--cacau-suave);
+      max-width: 480px;
+      margin: 0 auto 36px;
+    }
+    /* Cartão estilo "ficha técnica" */
+    .ficha {
+      background: var(--creme);
+      border: 1px solid #eaddd5;
+      border-radius: 12px;
+      padding: 28px 28px 24px;
+      box-shadow: 0 6px 24px rgba(59, 38, 32, 0.08);
+      margin-bottom: 32px;
+    }
+    .ficha-titulo {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: 20px;
+      font-weight: 600;
+      border-bottom: 2px dashed #e5d3c8;
+      padding-bottom: 12px;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .ficha-titulo span { font-size: 24px; }
+    .item {
+      display: flex;
+      gap: 12px;
+      padding: 10px 0;
+      align-items: flex-start;
+    }
+    .item + .item { border-top: 1px solid #f3e8e1; }
+    .check {
+      flex-shrink: 0;
+      width: 22px; height: 22px;
+      border-radius: 50%;
+      background: var(--framboesa);
+      color: #fff;
+      font-size: 13px;
+      display: flex; align-items: center; justify-content: center;
+      margin-top: 3px;
+    }
+    .item strong { display: block; font-size: 16px; }
+    .item p { font-size: 14px; color: var(--cacau-suave); }
+    .preco {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+    .preco .de {
+      font-size: 15px;
+      color: var(--cacau-suave);
+      text-decoration: line-through;
+    }
+    .preco .por {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: 42px;
+      font-weight: 700;
+      color: var(--framboesa);
+      line-height: 1.1;
+    }
+    .preco .detalhe { font-size: 14px; color: var(--cacau-suave); }
+    .aviso {
+      text-align: center;
+      font-size: 14px;
+      color: var(--dourado);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    /* Estilização do botão Kiwify (mantendo os IDs originais) */
+    #kiwify-upsell-trigger-9detHYP:hover { background-color: var(--framboesa-escura) !important; border-color: var(--framboesa-escura) !important; }
+    #kiwify-upsell-cancel-trigger-9detHYP { color: var(--cacau-suave); }
+    .garantia {
+      text-align: center;
+      font-size: 13px;
+      color: var(--cacau-suave);
+      margin-top: 28px;
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      .ficha { animation: subir 0.5s ease-out; }
+      @keyframes subir {
+        from { opacity: 0; transform: translateY(12px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+    }
+  </style>
 </head>
-<body style="font-family: Arial, sans-serif; background:#f5f5f5;">
-
-  <div style="
-    max-width:600px;
-    margin:80px auto;
-    background:#ffffff;
-    padding:32px;
-    border-radius:8px;
-    text-align:center;
-  ">
-    <h1>Oferta Especial 🎉</h1>
-
-    <p style="font-size:18px;">
-      Aproveite essa oferta exclusiva antes de finalizar!
+<body>
+  <div class="wrap">
+    <p class="eyebrow">Espere — sua compra ainda não terminou</p>
+    <h1>Acelere seus resultados com a Mentoria Express</h1>
+    <p class="sub">
+      Você acabou de garantir o curso. Agora, saia do "aprender" para o
+      "vender" com acompanhamento ao vivo e material pronto para usar.
     </p>
 
+    <div class="ficha">
+      <div class="ficha-titulo"><span>🧁</span> O que você leva hoje</div>
+      <div class="item">
+        <div class="check">✓</div>
+        <div>
+          <strong>4 encontros de mentoria ao vivo em grupo</strong>
+          <p>Tire dúvidas reais sobre receitas, precificação e primeiros clientes.</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="check">✓</div>
+        <div>
+          <strong>Planilha de precificação automática</strong>
+          <p>Digite os ingredientes e descubra o preço de venda ideal em segundos.</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="check">✓</div>
+        <div>
+          <strong>50 fichas técnicas prontas</strong>
+          <p>Receitas padronizadas com custo calculado — é só produzir e vender.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="preco">
+      <div class="de">De R$ 597</div>
+      <div class="por">R$ 397</div>
+      <div class="detalhe">em até 12x — apenas nesta página</div>
+    </div>
+
+    <p class="aviso">⏳ Oferta disponível somente agora</p>
+
     <!-- BOTÃO DE UPSELL KIWIFY -->
-<div style="text-align:center" id="kiwify-upsell-9detHYP" data-upsell-url="" data-downsell-url="https://maizaferreira-prog.github.io/meu-upsell/downsell">
-          <button id="kiwify-upsell-trigger-9detHYP" style="background-color:#5383ad;padding:12px 16px;cursor:pointer;color:#FFFFFF;font-weight:600;border-radius:4px;border:1px solid #5383ad;font-size:20px;">Sim, eu aceito essa oferta especial!</button>
-          <div id="kiwify-upsell-cancel-trigger-9detHYP" style="margin-top:1rem;cursor:pointer;font-size:16px;text-decoration:underline;font-family:sans-serif;">Não, eu gostaria de recusar essa oferta</div>
-        </div><script src="https://snippets.kiwify.com/upsell/upsell.min.js"></script>
+    <div style="text-align:center" id="kiwify-upsell-9detHYP" data-upsell-url="" data-downsell-url="https://maizaferreira-prog.github.io/meu-upsell/downsell">
+      <button id="kiwify-upsell-trigger-9detHYP" style="background-color:#b3164f;padding:16px 28px;cursor:pointer;color:#FFFFFF;font-weight:700;border-radius:8px;border:1px solid #b3164f;font-size:19px;font-family:'DM Sans',sans-serif;">Sim, quero a Mentoria Express!</button>
+      <div id="kiwify-upsell-cancel-trigger-9detHYP" style="margin-top:1rem;cursor:pointer;font-size:15px;text-decoration:underline;font-family:'DM Sans',sans-serif;">Não, prefiro seguir sozinha(o) e recusar esta oferta</div>
+    </div>
+    <script src="https://snippets.kiwify.com/upsell/upsell.min.js"></script>
+
+    <p class="garantia">🔒 Compra com 1 clique, sem redigitar dados de pagamento · Garantia de 7 dias</p>
+  </div>
 </body>
 </html>
